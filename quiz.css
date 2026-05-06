@@ -1,0 +1,243 @@
+.quiz-wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+.quiz-card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px;
+    border: 0.5px solid #e8e8e8;
+}
+
+.quiz-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.quiz-progress-text {
+    font-size: 13px;
+    color: #888;
+}
+
+.quiz-timer {
+    background: #fff5f5;
+    color: #c0392b;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.quiz-timer.warning { animation: pulse 0.5s infinite; }
+
+@keyframes pulse {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.progress-bar {
+    height: 5px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 22px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 5px;
+    background: #3b4cca;
+    border-radius: 4px;
+    transition: width 0.4s ease;
+}
+
+.question-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a2e;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.options-grid {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.option-btn {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid #e4e4e4;
+    border-radius: 10px;
+    background: white;
+    text-align: left;
+    font-size: 14px;
+    color: #444;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.option-btn:hover   { border-color: #3b4cca; background: #f8f9ff; }
+.option-btn.selected { border-color: #3b4cca; background: #eef0ff; color: #3b4cca; font-weight: 600; }
+.option-btn.correct  { border-color: #2e7d32; background: #f0fff4; color: #2e7d32; }
+.option-btn.wrong    { border-color: #c0392b; background: #fff5f5; color: #c0392b; }
+
+.quiz-nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.topic-card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    border: 0.5px solid #e8e8e8;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: border-color 0.2s, transform 0.2s;
+    display: block;
+    color: #333;
+}
+
+.topic-card:hover {
+    border-color: #3b4cca;
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+.topic-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.topic-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.topic-count {
+    font-size: 12px;
+    color: #888;
+}
+
+.practice-wrapper {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 28px 20px;
+}
+
+.practice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.practice-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a2e;
+}
+
+.practice-count {
+    font-size: 13px;
+    color: #888;
+}
+
+.practice-bar {
+    height: 6px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.practice-bar-fill {
+    height: 6px;
+    background: #3b4cca;
+    border-radius: 4px;
+}
+
+.problem-list {
+    background: white;
+    border-radius: 14px;
+    border: 0.5px solid #e8e8e8;
+    overflow: hidden;
+}
+
+.problem-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border-bottom: 0.5px solid #f0f0f0;
+    transition: background 0.15s;
+}
+
+.problem-item:last-child { border-bottom: none; }
+.problem-item:hover      { background: #fafafa; }
+
+.problem-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.problem-check {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.2s;
+}
+
+.problem-check.solved {
+    background: #2e7d32;
+    border-color: #2e7d32;
+}
+
+.problem-title {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.problem-title.solved-text {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.difficulty {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.diff-easy   { background: #f0fff4; color: #2e7d32; }
+.diff-medium { background: #fff8e1; color: #e65100; }
+.diff-hard   { background: #fff0f0; color: #c0392b; }
